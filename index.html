@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>市川 美沙 (Misa Ichikawa) — Career Portfolio</title>
+  <meta name="description" content="慶應義塾大学 体育会ラクロス部スタッフ / 山本勲研究会（計量経済学）/ 練習記録データサイト「ラクログ」開発。市川美沙のキャリア・ポートフォリオ。" />
+
+  <!-- Google Fonts: 洗練されたプロフェッショナルなフォント -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Chart.js (人生グラフ・モチベーション曲線用) -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+
+  <!-- スタイルシート -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ==============================================
+       HEADER / NAVIGATION
+       ============================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner container">
+      <a href="#hero" class="brand-logo">
+        <span class="logo-mark">MI</span>
+        <div class="logo-text">
+          <span class="logo-name">市川 美沙</span>
+          <span class="logo-en">Misa Ichikawa</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="#about" class="nav-item">About</a>
+        <a href="#schedule" class="nav-item">Weekly Rhythm</a>
+        <a href="#life" class="nav-item">Life Story</a>
+        <a href="#works" class="nav-item">Works & Skills</a>
+        <a href="#laclog" class="nav-item">LacLog</a>
+      </nav>
+
+      <div class="header-actions">
+        <button id="photoGuideBtn" class="btn-secondary btn-sm" title="写真を自分の写真に差し替える方法">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+          写真の差し替え方
+        </button>
+        <a href="mailto:ichimi0726@gmail.com" class="btn-primary btn-sm">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          お問い合わせ
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==============================================
+         HERO SECTION (ファーストビュー)
+         ============================================== -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-grid">
+        <!-- 左側：キャッチコピー・自己紹介 -->
+        <div class="hero-content">
+          <div class="hero-eyebrow">
+            <span class="status-indicator"></span>
+            <span>KEIO UNIVERSITY / LACROSSE / DATA & DX</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span class="text-gradient">自己紹介ポートフォリオ</span>
+          </h1>
+
+          <p class="hero-desc">
+            慶應義塾大学 体育会ラクロス部スタッフ。<br>
+            選手時代の膝の怪我を転機に、山本勲研究会（計量経済学・因果推論）でのデータ分析と、
+            練習記録サイト「ラクログ」の企画・開発を実践。<br>
+            客観的根拠をもとにPDCAを回し、周囲を巻き込んで組織の成果を最大化することに情熱を注いでいます。
+          </p>
+
+          <!-- キーバッジ（MBTI削除） -->
+          <div class="hero-badges">
+            <span class="badge-item"><span class="badge-icon">🥍</span> 体育会ラクロス部（元選手 / 現スタッフ）</span>
+            <span class="badge-item"><span class="badge-icon">📊</span> 山本勲研究会（計量経済・因果推論）</span>
+            <span class="badge-item"><span class="badge-icon">💻</span> 練習記録データサイト「ラクログ」企画・開発</span>
+            <span class="badge-item"><span class="badge-icon">🧮</span> 日商簿記2級（2.5ヶ月で一発合格）</span>
+          </div>
+
+          <div class="hero-cta-group">
+            <a href="#life" class="btn-primary">
+              人生グラフ・転機を見る
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a href="#works" class="btn-outline">強み・実績一覧</a>
+          </div>
+        </div>
+
+        <!-- 右側：メイン写真カード -->
+        <div class="hero-visual">
+          <div class="profile-card-modern">
+            <div class="photo-wrapper">
+              <img 
+                id="heroProfileImg" 
+                src="images/profile.jpg" 
+                data-fallback="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80"
+                alt="市川 美沙 (Misa Ichikawa)" 
+                class="responsive-photo clickable-photo"
+              />
+              <div class="photo-overlay-tag">
+                <span class="tag-title">市川 美沙 / Misa Ichikawa</span>
+                <span class="tag-subtitle">Keio Lacrosse Staff & Web Developer</span>
+              </div>
+            </div>
+            
+            <div class="profile-card-stats">
+              <div class="stat-item">
+                <span class="stat-number">2005</span>
+                <span class="stat-label">BORN (北海道)</span>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat-item">
+                <span class="stat-number">慶應商学</span>
+                <span class="stat-label">FACULTY</span>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat-item">
+                <span class="stat-number">2級</span>
+                <span class="stat-label">日商簿記</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         SECTION 01: ABOUT ME (基本情報 & 活動写真ギャラリー)
+         ============================================== -->
+    <section id="about" class="section-block">
+      <div class="container">
+        <div class="section-header-modern">
+          <span class="section-label">01 / ABOUT ME</span>
+          <h2 class="section-title">私について</h2>
+          <p class="section-subtitle">客観的データに基づく判断力と、人を巻き込む情熱を大切にしています。</p>
+        </div>
+
+        <div class="about-grid-modern">
+          <!-- 左カラム：基本情報カード -->
+          <div class="profile-info-card">
+            <h3 class="card-inner-title">プロフィール概要</h3>
+            <div class="info-table">
+              <div class="info-row">
+                <span class="info-key">氏名</span>
+                <span class="info-val">市川 美沙（Misa Ichikawa）</span>
+              </div>
+              <div class="info-row">
+                <span class="info-key">出身地</span>
+                <span class="info-val">北海道</span>
+              </div>
+              <div class="info-row">
+                <span class="info-key">大学</span>
+                <span class="info-val">慶應義塾大学 商学部</span>
+              </div>
+              <div class="info-row">
+                <span class="info-key">所属組織</span>
+                <span class="info-val">体育会ラクロス部（元選手 / 現スタッフ・学年幹部2度選出）</span>
+              </div>
+              <div class="info-row">
+                <span class="info-key">所属研究会</span>
+                <span class="info-val">山本勲研究会（計量経済学・因果推論）</span>
+              </div>
+              <div class="info-row">
+                <span class="info-key">保有資格</span>
+                <span class="info-val">日商簿記検定 2級（問題集2冊×3周、2.5ヶ月で一発合格）</span>
+              </div>
+              <div class="info-row">
+                <span class="info-key">開発中サイト</span>
+                <span class="info-val">ラクロス練習記録データサイト「ラクログ（LacLog）」</span>
+              </div>
+              <div class="info-row">
+                <span class="info-key">コアの強み</span>
+                <span class="info-val">PDCAを高速で回す計画性、数字と客観的根拠に基づく判断、組織を巻き込む対話力</span>
+              </div>
+              <div class="info-row">
+                <span class="info-key">好きなこと</span>
+                <span class="info-val">ジャルジャルのお笑い、アサイーボウル、思いきり歌うこと</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 右カラム：活動写真ギャラリー（4枚グリッド） -->
+          <div class="activity-gallery-block">
+            <h3 class="card-inner-title">活動フォトスナップ</h3>
+            <p class="gallery-lead">写真をクリックすると拡大してご覧いただけます。</p>
+            
+            <div class="gallery-grid">
+              <!-- 写真1: ラクロス部 -->
+              <div class="gallery-card clickable-photo" data-caption="体育会ラクロス部での活動風景。選手からスタッフへ転向し、練習のデータ分析や戦術共有を推進。">
+                <img 
+                  id="imgLacrosse" 
+                  src="images/lacrosse-action.jpg" 
+                  data-fallback="https://images.unsplash.com/photo-1517649763962-0c623266ddc0?auto=format&fit=crop&w=600&q=80" 
+                  alt="体育会ラクロス部での活動"
+                />
+                <div class="gallery-badge">🥍 ラクロス部活動</div>
+              </div>
+
+              <!-- 写真2: キャンパス・ゼミ -->
+              <div class="gallery-card clickable-photo" data-caption="慶應義塾大学 山本勲研究会（計量経済学）。因果推論や回帰分析を用いて客観的なデータ分析を学修。">
+                <img 
+                  id="imgSeminar" 
+                  src="images/seminar.jpg" 
+                  data-fallback="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=600&q=80" 
+                  alt="慶應大学・ゼミ活動"
+                />
+                <div class="gallery-badge">📚 ゼミ・学業</div>
+              </div>
+
+              <!-- 写真3: サイト開発・PC作業 -->
+              <div class="gallery-card clickable-photo" data-caption="練習記録サイト「ラクログ」の開発および戦術共有サイトの構築風景。AIツールも活用して部活のDXを自ら形に。">
+                <img 
+                  id="imgTech" 
+                  src="images/tech-dev.jpg" 
+                  data-fallback="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=600&q=80" 
+                  alt="サイト開発と分析"
+                />
+                <div class="gallery-badge">💻 開発・データ分析</div>
+              </div>
+
+              <!-- 写真4: 日常・チームとの対話 -->
+              <div class="gallery-card clickable-photo" data-caption="アルバイト（焼肉店・個別指導塾）や仲間とのコミュニケーション。人と深く寄り添う対話を重視。">
+                <img 
+                  id="imgLifestyle" 
+                  src="images/lifestyle.jpg" 
+                  data-fallback="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=80" 
+                  alt="チームとの対話・日常"
+                />
+                <div class="gallery-badge">🤝 対話・チームワーク</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         SECTION 02: WEEKLY RHYTHM (1週間のスケジュール)
+         ============================================== -->
+    <section id="schedule" class="section-block bg-slate-subtle">
+      <div class="container">
+        <div class="section-header-modern">
+          <span class="section-label">02 / WEEKLY RHYTHM</span>
+          <h2 class="section-title">1週間のスケジュールと時間管理</h2>
+          <p class="section-subtitle">
+            朝5:30起きの部活動からゼミ・サイト開発・アルバイトまで。<br>
+            目標を確実に達成するための徹底したPDCAと自己管理ルーティンです。
+          </p>
+        </div>
+
+        <div class="schedule-grid">
+          <!-- 月曜日 -->
+          <div class="schedule-card">
+            <div class="day-head">
+              <span class="day-jp">月曜日</span>
+              <span class="day-code">MON</span>
+            </div>
+            <div class="day-events">
+              <div class="event-pill event-rest">🌙 調整・リフレッシュ</div>
+              <div class="event-pill event-uni">🏫 10:45〜 大学講義</div>
+              <div class="event-pill event-zemi">📊 14:45〜 山本勲ゼミ</div>
+            </div>
+          </div>
+
+          <!-- 火曜日 -->
+          <div class="schedule-card">
+            <div class="day-head">
+              <span class="day-jp">火曜日</span>
+              <span class="day-code">TUE</span>
+            </div>
+            <div class="day-events">
+              <div class="event-pill event-wake">⏰ 5:30 起床</div>
+              <div class="event-pill event-lacrosse">🥍 7:30〜 部活練習</div>
+              <div class="event-pill event-uni">🏫 10:45〜 大学講義</div>
+              <div class="event-pill event-work">🥩 17:00〜 焼肉屋バイト</div>
+            </div>
+          </div>
+
+          <!-- 水曜日 -->
+          <div class="schedule-card">
+            <div class="day-head">
+              <span class="day-jp">水曜日</span>
+              <span class="day-code">WED</span>
+            </div>
+            <div class="day-events">
+              <div class="event-pill event-wake">⏰ 5:30 起床</div>
+              <div class="event-pill event-lacrosse">🥍 7:30〜 部活練習</div>
+              <div class="event-pill event-uni">🏫 10:45〜 大学講義</div>
+              <div class="event-pill event-zemi">📊 14:45〜 山本勲ゼミ</div>
+            </div>
+          </div>
+
+          <!-- 木曜日 -->
+          <div class="schedule-card">
+            <div class="day-head">
+              <span class="day-jp">木曜日</span>
+              <span class="day-code">THU</span>
+            </div>
+            <div class="day-events">
+              <div class="event-pill event-rest">🌙 午前：研究・講義準備</div>
+              <div class="event-pill event-uni">🏫 10:45〜 大学講義</div>
+              <div class="event-pill event-dev">💻 ラクログ開発 & 振り返り</div>
+            </div>
+          </div>
+
+          <!-- 金曜日 -->
+          <div class="schedule-card">
+            <div class="day-head">
+              <span class="day-jp">金曜日</span>
+              <span class="day-code">FRI</span>
+            </div>
+            <div class="day-events">
+              <div class="event-pill event-wake">⏰ 5:30 起床</div>
+              <div class="event-pill event-lacrosse">🥍 7:30〜 部活練習</div>
+              <div class="event-pill event-uni">🏫 10:45〜 大学講義</div>
+              <div class="event-pill event-work">📖 17:30〜 個別塾講師</div>
+            </div>
+          </div>
+
+          <!-- 土曜日 -->
+          <div class="schedule-card weekend-card">
+            <div class="day-head">
+              <span class="day-jp">土曜日</span>
+              <span class="day-code">SAT</span>
+            </div>
+            <div class="day-events">
+              <div class="event-pill event-wake">⏰ 5:30 起床</div>
+              <div class="event-pill event-lacrosse">🥍 7:30〜 部活練習</div>
+              <div class="event-pill event-work">🥩 17:00〜 焼肉屋バイト</div>
+            </div>
+          </div>
+
+          <!-- 日曜日 -->
+          <div class="schedule-card weekend-card">
+            <div class="day-head">
+              <span class="day-jp">日曜日</span>
+              <span class="day-code">SUN</span>
+            </div>
+            <div class="day-events">
+              <div class="event-pill event-wake">⏰ 5:30 起床</div>
+              <div class="event-pill event-lacrosse">🥍 7:30〜 練習 / 試合</div>
+              <div class="event-pill event-rest">☕ 翌週の計画と振り返り</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="schedule-insights">
+          <div class="insight-item">
+            <span class="insight-icon">🎯</span>
+            <div class="insight-text">
+              <strong>移動時間の徹底活用：</strong> 行きの電車でその日の目標と課題を設定し、帰りの電車で即座に振り返りと改善案を言語化。
+            </div>
+          </div>
+          <div class="insight-item">
+            <span class="insight-icon">⚖️</span>
+            <div class="insight-text">
+              <strong>マルチタスクの両立力：</strong> 週5日の早朝部活を行いながら、難関ゼミ・簿記2級取得・サイト開発・アルバイト2つをすべて高い水準で継続。
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         SECTION 03: LIFE STORY (人生グラフ / モチベーション曲線)
+         ============================================== -->
+    <section id="life" class="section-block">
+      <div class="container">
+        <div class="section-header-modern">
+          <span class="section-label">03 / LIFE STORY</span>
+          <h2 class="section-title">人生グラフ（モチベーション曲線）</h2>
+          <p class="section-subtitle">
+            最大の壁であった「膝の怪我」をどう捉え直し、強みへと昇華させたか。<br>
+            グラフ上の各ポイントにホバーすると、当時のエピソードと得られた学びが表示されます。
+          </p>
+        </div>
+
+        <div class="chart-container-modern">
+          <!-- グラフ上部のサマリーハイライト -->
+          <div class="chart-highlight-bar">
+            <div class="highlight-chip chip-red">
+              <span class="chip-dot dot-red"></span>
+              <span><strong>大2・4月：半月板損傷（人生最大の挫折）</strong> — 競技継続が断たれた瞬間</span>
+            </div>
+            <div class="highlight-chip chip-teal">
+              <span class="chip-dot dot-teal"></span>
+              <span><strong>大2・冬〜現在：スタッフ転向 ＆ ラクログ開発</strong> — データを武器に組織を勝たせる挑戦</span>
+            </div>
+          </div>
+
+          <!-- Chart.js Canvas -->
+          <div class="chart-canvas-scroll-container">
+            <div class="chart-canvas-wrapper">
+              <canvas id="lifeChartCanvas"></canvas>
+            </div>
+          </div>
+          <p class="chart-hint-note">💡 グラフの各ポイントをクリックまたはホバーすると、該当時期の詳細エピソードと学びが表示されます。</p>
+
+          <!-- 選択中エピソードのインタラクティブ・ストーリーカード -->
+          <div class="interactive-story-panel" id="interactiveStoryPanel">
+            <div class="story-panel-header">
+              <div class="story-header-left">
+                <span class="story-badge" id="storyAgeBadge">現在</span>
+                <h3 class="story-title" id="storyAgeTitle">ラクログ × 計量経済 × 部活DX ✦</h3>
+              </div>
+              <div class="story-header-right">
+                <span class="story-score-label">モチベーション指標</span>
+                <span class="story-score-value" id="storyScoreVal">97 / 100</span>
+              </div>
+            </div>
+            <div class="story-panel-body">
+              <div class="story-detail-box">
+                <span class="box-tag">当時の状況・エピソード</span>
+                <p id="storyDetailText">紙記録の全廃、AIデータ分析による選手起用支援など、チームを勝たせる新しいマネジメントを確立。</p>
+              </div>
+              <div class="story-learn-box">
+                <span class="box-tag box-tag-teal">得られた気づき・教訓</span>
+                <p id="storyLearnText">困難な経験すべてが、唯一無二の強みと貢献につながっている</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4大ターニングポイント詳細カード -->
+          <div class="turning-points-grid">
+            <div class="tp-card">
+              <div class="tp-step">STEP 01 / 高校3年 冬</div>
+              <h4 class="tp-title">慶應義塾大学 合格</h4>
+              <p class="tp-desc">
+                「現状維持よりも挑戦」を選び、高い目標を掲げて受験勉強を完遂。計画を細分化してやり切る成功体験となりました。
+              </p>
+              <div class="tp-takeaway">
+                <span class="takeaway-label">学び:</span> 逆算思考で日々の行動に落とし込めば、高い壁も確実に突破できる。
+              </div>
+            </div>
+
+            <div class="tp-card tp-card-focus">
+              <div class="tp-step text-alert">STEP 02 / 大学2年 4月</div>
+              <h4 class="tp-title">半月板損傷の手術（最大の壁）</h4>
+              <p class="tp-desc">
+                選手として懸命に取り組んでいた中で膝を負傷。手術と10ヶ月に及ぶリハビリを経験し、選手復帰の道を断念せざるを得ない苦境に直面。
+              </p>
+              <div class="tp-takeaway">
+                <span class="takeaway-label">転換:</span> 病室から練習動画を分析し、チームメイトへ戦術改善を提案。自分にできる新たな価値を発見。
+              </div>
+            </div>
+
+            <div class="tp-card">
+              <div class="tp-step">STEP 03 / 大学2年 秋〜冬</div>
+              <h4 class="tp-title">簿記2級＆難関ゼミ合格</h4>
+              <p class="tp-desc">
+                リハビリ期間を好機と捉え、簿記2級の短期集中取得と山本勲研究会（計量経済学）の選考に挑戦。客観的データ分析への関心が確立。
+              </p>
+              <div class="tp-takeaway">
+                <span class="takeaway-label">学び:</span> 逆境こそ新しい武器を手に入れる最大のチャンスであるという確信。
+              </div>
+            </div>
+
+            <div class="tp-card tp-card-highlight">
+              <div class="tp-step text-teal">STEP 04 / 現在</div>
+              <h4 class="tp-title">スタッフ転向＆ラクログ開発</h4>
+              <p class="tp-desc">
+                部活動のDXを牽引するスタッフへ転向。紙の記録を廃止し、練習データ記録サイト「ラクログ」を企画・開発。データで勝てるチーム作りを実践。
+              </p>
+              <div class="tp-takeaway">
+                <span class="takeaway-label">現在地:</span> 選手時代の経験×計量経済学×テクノロジーを掛け合わせた唯一無二の貢献。
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         SECTION 04: WORKS & SKILLS (実績と強み)
+         ============================================== -->
+    <section id="works" class="section-block bg-slate-subtle">
+      <div class="container">
+        <div class="section-header-modern">
+          <span class="section-label">04 / WORKS & SKILLS</span>
+          <h2 class="section-title">実績と強み</h2>
+          <p class="section-subtitle">
+            どのような環境でも「どうすれば現状を良くできるか」を自ら考え、行動に移してきました。
+          </p>
+        </div>
+
+        <div class="skills-grid-modern">
+          <!-- 1. Finance -->
+          <div class="skill-card-modern">
+            <div class="skill-card-header">
+              <span class="skill-category">FINANCE</span>
+              <span class="skill-icon">🧮</span>
+            </div>
+            <h3 class="skill-title">日商簿記 2級</h3>
+            <p class="skill-body">
+              問題集2冊をそれぞれ3周解き込み、2.5ヶ月で一発合格。幼少期からの数字への親しみを論理的な会計知識へと昇華させ、目標達成に向けた高い集中力を発揮しました。
+            </p>
+          </div>
+
+          <!-- 2. Tech & Web -->
+          <div class="skill-card-modern featured-skill">
+            <div class="skill-card-header">
+              <span class="skill-category">TECH & WEB</span>
+              <span class="skill-icon">&lt;/&gt;</span>
+            </div>
+            <h3 class="skill-title">プログラミング ＆ サイト開発</h3>
+            <p class="skill-body">
+              怪我を契機に「練習現場の記録やデータを可視化したい」と決意。エンジニアと連携し、AIツールも駆使しながら練習記録サイト「ラクログ」の開発を推進。さらに、コーチのお手本動画を体系化して部員へ共有する「戦術共有Webサイト」も自ら構築・運用しています。
+            </p>
+          </div>
+
+          <!-- 3. Data Science -->
+          <div class="skill-card-modern">
+            <div class="skill-card-header">
+              <span class="skill-category">DATA SCIENCE</span>
+              <span class="skill-icon">📊</span>
+            </div>
+            <h3 class="skill-title">計量経済学・因果推論</h3>
+            <p class="skill-body">
+              山本勲研究会に所属。回帰分析や因果推論の手法を専門的に学び、感覚や勘に依存しない客観的エビデンス（ファクト）に基づく意思決定プロセスを実践しています。
+            </p>
+          </div>
+
+          <!-- 4. Leadership -->
+          <div class="skill-card-modern">
+            <div class="skill-card-header">
+              <span class="skill-category">LEADERSHIP</span>
+              <span class="skill-icon">♛</span>
+            </div>
+            <h3 class="skill-title">リーダーシップ ＆ 周囲の巻き込み</h3>
+            <p class="skill-body">
+              ラクロス部学年幹部に2度選出。軽音部リーダーや中学・高校の学級委員も歴任。相手の立場を尊重しながら明確な役割分担を行い、全員が主体性を持って動ける組織を作ります。
+            </p>
+          </div>
+
+          <!-- 5. Mindset -->
+          <div class="skill-card-modern featured-skill">
+            <div class="skill-card-header">
+              <span class="skill-category">MINDSET</span>
+              <span class="skill-icon">⟳</span>
+            </div>
+            <h3 class="skill-title">PDCA思考 ＆ 徹底した振り返り</h3>
+            <p class="skill-body">
+              行きの電車でその日の目標を定め、練習で実践し、帰りの電車で即座に振り返り、夜に映像分析を実施。勝敗の明確な環境で、仮説検証のサイクルを高速で回し続けます。
+            </p>
+          </div>
+
+          <!-- 6. Innovation -->
+          <div class="skill-card-modern">
+            <div class="skill-card-header">
+              <span class="skill-category">OPERATIONS & DX</span>
+              <span class="skill-icon">↗</span>
+            </div>
+            <h3 class="skill-title">組織改善・部活動のDX推進</h3>
+            <p class="skill-body">
+              スタッフ就任後、チームの運営課題を80項目洗い出し。紙での記録作業をデジタル化し、蓄積された練習・試合データからAI分析を行って選手起用の客観的提案を実施しています。
+            </p>
+          </div>
+
+          <!-- 7. Communication -->
+          <div class="skill-card-modern">
+            <div class="skill-card-header">
+              <span class="skill-category">COMMUNICATION</span>
+              <span class="skill-icon">💼</span>
+            </div>
+            <h3 class="skill-title">相手に寄り添う対話力・接客力</h3>
+            <p class="skill-body">
+              焼肉店でのアルバイトでは店舗オリジナルビールの売上1位を記録。個別指導塾では代理担当した生徒から指名を受けるなど、相手のニーズを汲み取り信頼関係を築く対話が得意です。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         SECTION 05: FEATURED PROJECT "LACLOG" (開発中サイト)
+         ============================================== -->
+    <section id="laclog" class="section-block">
+      <div class="container">
+        <div class="project-showcase-panel">
+          <div class="project-grid">
+            <!-- プロジェクト説明 -->
+            <div class="project-info">
+              <div class="project-tag-pill">PRACTICE DATA PLATFORM</div>
+              <h2 class="project-title">ラクログ <span class="title-en">LacLog</span></h2>
+              <p class="project-lead">
+                日々の練習と個人の成長をデータで見える化する。<br>
+                ラクロス練習記録データサイト。
+              </p>
+
+              <div class="project-context-box">
+                <h4 class="context-title">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                  課題認識と開発の背景
+                </h4>
+                <p>
+                  選手からスタッフへ転向した際、従来の「紙による記録管理」と「データの属人化」に大きな課題を感じました。<br>
+                  選手一人ひとりのシュート決定率や1on1データをデジタル蓄積・可視化することで、客観的な振り返りと成長の加速を支援しています。<br>
+                  <span class="note-subtext">※ コーチのお手本動画を体系化して部内共有する「戦術共有Webサイト」は、戦術理解のための別プロジェクトとして別途自作・運用しています。</span>
+                </p>
+              </div>
+
+              <div class="project-meta-grid">
+                <div class="meta-column">
+                  <span class="meta-label">TECH STACK</span>
+                  <span class="meta-value">Next.js / TypeScript / Firebase / Python Data Analysis</span>
+                </div>
+                <div class="meta-column">
+                  <span class="meta-label">MY RESPONSIBILITIES</span>
+                  <span class="meta-value">企画・要件定義 / UI・UX設計 / データ設計</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 練習記録サイト モックアップ画面 -->
+            <div class="project-mockup-wrapper">
+              <div class="smartphone-frame">
+                <div class="screen-speaker"></div>
+                <div class="smartphone-screen">
+                  <div class="app-status-bar">
+                    <span class="time-label">09:41</span>
+                    <span class="signal-icons">●●● 5G</span>
+                  </div>
+                  <div class="app-nav-bar">
+                    <span class="app-brand-name">LacLog</span>
+                    <span class="app-user-badge">Practice Log</span>
+                  </div>
+                  
+                  <div class="app-card-primary">
+                    <div class="card-eyebrow">TODAY'S PRACTICE LOG</div>
+                    <div class="analysis-score">
+                      <span class="score-num">68.4%</span>
+                      <span class="score-label">1on1 決定率（前週比 +4.2%）</span>
+                    </div>
+                    <div class="progress-bar-bg">
+                      <div class="progress-bar-fill" style="width: 68%;"></div>
+                    </div>
+                  </div>
+
+                  <div class="app-mini-section">
+                    <div class="section-label-mini">PRACTICE METRICS SUMMARY</div>
+                    <div class="record-row">
+                      <span>シュート決定数: 24/35</span>
+                      <span class="badge-success">HIGH</span>
+                    </div>
+                    <div class="record-row">
+                      <span>グラウンドボール回収率: 72%</span>
+                      <span class="badge-neutral">NORMAL</span>
+                    </div>
+                    <div class="record-row">
+                      <span>パス成功率: 88.5%</span>
+                      <span class="badge-success">HIGH</span>
+                    </div>
+                  </div>
+
+                  <div class="app-mini-section">
+                    <div class="section-label-mini">WEEKLY TREND</div>
+                    <div class="record-row">
+                      <span>個人目標達成度: 4/5 項目達成</span>
+                      <span class="badge-success">EXCELLENT</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="mockup-caption">「ラクログ」練習記録画面イメージ（開発中）</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==============================================
+       FOOTER
+       ============================================== -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <div class="footer-logo">
+          <span class="logo-mark">MI</span>
+          <span>市川 美沙 / Misa Ichikawa</span>
+        </div>
+        <p class="footer-note">最後までご覧いただきありがとうございました。面談やご質問など、お気軽にご連絡ください。</p>
+      </div>
+
+      <div class="footer-right">
+        <a href="mailto:ichimi0726@gmail.com" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          ichimi0726@gmail.com へ連絡する
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container copyright">
+        © 2026 Misa Ichikawa. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==============================================
+       PHOTO LIGHTBOX MODAL (写真拡大表示)
+       ============================================== -->
+  <div id="photoLightbox" class="lightbox-overlay">
+    <div class="lightbox-card">
+      <button id="lightboxClose" class="lightbox-close-btn" aria-label="閉じる">✕</button>
+      <div class="lightbox-img-wrap">
+        <img id="lightboxImg" src="" alt="拡大写真" />
+      </div>
+      <p id="lightboxCaption" class="lightbox-caption"></p>
+    </div>
+  </div>
+
+  <!-- ==============================================
+       PHOTO GUIDE MODAL (写真差し替え方法案内)
+       ============================================== -->
+  <div id="photoGuideModal" class="guide-modal-overlay">
+    <div class="guide-modal-card">
+      <div class="guide-modal-header">
+        <h3 class="guide-title">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+          企業の方に見せるご自身の写真の入れ方
+        </h3>
+        <button id="guideClose" class="guide-close-btn" aria-label="閉じる">✕</button>
+      </div>
+      <div class="guide-modal-body">
+        <p class="guide-p">
+          このサイトは、<code>images/</code> フォルダに以下のファイル名で写真画像を保存するだけで、自動的にあなたの実写真に差し替わるよう設計されています。
+        </p>
+        <div class="guide-table-wrap">
+          <table class="guide-table">
+            <thead>
+              <tr>
+                <th>ファイル名</th>
+                <th>表示される場所</th>
+                <th>おすすめの写真</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>images/profile.jpg</code></td>
+                <td>トップのメインプロフィール写真</td>
+                <td>スーツやオフィスカジュアル、または清潔感のある笑顔のポートレート</td>
+              </tr>
+              <tr>
+                <td><code>images/lacrosse-action.jpg</code></td>
+                <td>Aboutスナップ 1</td>
+                <td>ラクロス部のグラウンド練習や試合、真剣な表情の活動写真</td>
+              </tr>
+              <tr>
+                <td><code>images/seminar.jpg</code></td>
+                <td>Aboutスナップ 2</td>
+                <td>慶應大学のキャンパス、ゼミでの発表やディスカッション風景</td>
+              </tr>
+              <tr>
+                <td><code>images/tech-dev.jpg</code></td>
+                <td>Aboutスナップ 3</td>
+                <td>パソコンでの分析作業、アプリ画面デザインの検討風景</td>
+              </tr>
+              <tr>
+                <td><code>images/lifestyle.jpg</code></td>
+                <td>Aboutスナップ 4</td>
+                <td>仲間とのミーティング、アルバイト先での笑顔、自然体の人柄が伝わる写真</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="guide-note">
+          ※ 写真ファイルがまだ配置されていない場合は、自動的にプロフェッショナルなプレースホルダー画像が表示されます。
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- スクリプト -->
+  <script src="script.js"></script>
+</body>
+</html>
