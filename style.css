@@ -1144,6 +1144,51 @@ body {
   align-items: center;
 }
 
+/* LacLog 写真フレーム */
+.laclog-photo-frame {
+  position: relative;
+  width: 320px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+}
+
+.laclog-scene-photo {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+.laclog-photo-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 16px;
+  background: linear-gradient(transparent, rgba(5,12,30,0.92));
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.laclog-stat-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.laclog-badge {
+  background: rgba(0, 212, 255, 0.2);
+  border: 1px solid rgba(0, 212, 255, 0.5);
+  color: #00d4ff;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+  letter-spacing: 0.02em;
+}
+
 .smartphone-frame {
   width: 290px;
   height: 540px;
